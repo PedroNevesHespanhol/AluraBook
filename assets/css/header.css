@@ -1,0 +1,65 @@
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__menu-hamburguer {
+    background-image: url("../images/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+/* 'position: absolute e top: 100%' usado aqui para que 
+a lista-menu fique 100% abaixo do header, para isso 
+foi usado o position: relative na classe cabecalho,
+que é nosso header */
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+/* "~" é um combinador css, nesse caso depois que verifica
+o botao com a pseudo-classe checked, ele busca a outra 
+classe e determina display: block pra ela */
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo, .lista-menu__item {
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
