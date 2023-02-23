@@ -11,6 +11,14 @@
     align-items: center;
 }
 
+.container__botao:checked~.container__rotulo>.cabecalho__menu-hamburguer {
+    background-image: url("../images/Menu Aberto.svg");
+}
+
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+}
+
 .cabecalho__menu-hamburguer {
     background-image: url("../images/Menu.svg");
     background-repeat: no-repeat;
@@ -149,5 +157,23 @@ classe e determina display: block pra ela */
     .opcoes {
         /* utilizando flex container, com o valor auto para margin, ocupa todo o espaço restante */
         margin-right: auto;
+    }
+
+    .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opcoes__item {
+        padding: 1em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
     }
 }
